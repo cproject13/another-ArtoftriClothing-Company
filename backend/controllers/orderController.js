@@ -160,3 +160,31 @@ exports.deleteOrder = catchAsyncErrors(async (req, res, next) => {
     success: true,
   });
 });
+
+// EDIT/UPDATE Order expected date - admin
+exports.updateOrderExpectedDate = catchAsyncErrors(async (req, res, next) => {
+  const {expectedDate} = req.body
+  const order = await Order.findById(req.params.id);
+
+  if (!order) {
+    return next(new ErrorHander("Order not found with this Id", 404));
+  }
+
+  if (order.orderStatus === "Delivered") {
+    return next(new ErrorHander("You have already delivered this order", 400));
+  }
+
+  if (order.orderStatus === "Processing") {
+    return next(new ErrorHander("This order is still on process.", 400));
+  }
+
+  if (req.body.status === "Shipped") {
+    order.expectedDate = expectedDate;
+    order.expectedAt = moment(expectedDate).format('MMMM DD YYYY');
+  }
+
+  await order.save({ validateBeforeSave: false });
+  res.status(200).json({
+    success: true,
+  });
+});

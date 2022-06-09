@@ -110,7 +110,9 @@ const orderSchema = new mongoose.Schema({
   },
   createdtimeAt: String,
   deliveredAt: String,
-  createdAt: String
+  createdAt: String,
+  expectedDate: Date,
+  expectedAt: String,
 });
 
 module.exports = mongoose.model("Order", orderSchema);
