@@ -1,0 +1,208 @@
+.containerForCustom {
+    font-family:'Poppins', sans-serif;
+    height: 100vh;
+    background: url("./img/background2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.designItem1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #ddd;
+    background-image: url("./images/1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 10;
+}
+
+.drawing-area {
+    position: relative;
+    box-sizing:border-box;
+    max-height:inherit;
+    max-width:inherit;
+    top:-32em;
+    width: 282px;
+    height: 490px;
+    overflow: hidden;
+    border:1px solid rgba(0, 0, 0, 0.219);
+    margin-left:5em;
+   
+   
+}
+
+#tshirt-div {
+    width: 452px;
+    height: 545px;
+    position: relative;
+    left: 20vh;
+    margin-top:3em;
+}
+.back-shirt-btn {
+    padding:0.5em;
+    font-size:1em;
+    font-weight:400;
+    background-color: #2b2b2b;
+    color:white;
+    cursor:pointer;
+}
+.back-shirt-btn:hover {
+    background: #3f3f3f;
+    transition:0.2s ease-in-out;
+}
+
+.settings {
+    margin-left: 30px;
+    align-items: right;
+    justify-content: right;
+    border-radius: 5px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border: 2px solid rgb(161, 161, 161);
+    padding: 2em;
+    background: white;
+    
+    width: 50vh;
+    position: absolute;
+    top: 16vh;
+    right: 40vh;
+    margin-top:3em;
+}
+
+.settings select {
+    padding: 0.75em;
+}
+
+.button {
+    background: #222222;
+    font-family:'Poppins', sans-serif;
+    color: #ffff;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px;
+    box-shadow: 1px 2px 3px #222222;
+    font-family:'Poppins', sans-serif;
+    cursor:pointer !important;
+    transition:0.2s ease-in-out;
+}
+
+.button:hover {
+    background: hsl(0, 1%, 65%);
+    transition:0.2s ease-in-out;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.reset {
+    transition:0.2s ease-in-out;
+    background: #222222;
+    font-family:'Poppins', sans-serif;
+    color: #ffff;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px;
+    box-shadow: 1px 2px 3px#222222;
+    cursor:pointer;
+}
+
+.reset:hover {
+    background: hsl(0, 1%, 65%);
+    text-decoration: none;
+}
+
+.output {
+    margin-left: 30px;
+}
+
+.one {
+    height: 100px;
+    width: 100px;
+    background-image: url("./images/1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 10px;
+    border: 1px solid;
+}
+
+.two {
+    height: 100px;
+    width: 100px;
+    background-image: url("./images/2.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 10px;
+    border: 1px solid;
+}
+
+
+.three {
+    height: 100px;
+    width: 100px;
+    background-image: url("./images/3.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    top: 10px;
+    border: 1px solid;
+}
+
+.four {
+    height: 100px;
+    width: 100px;
+    background-image: url("./images/4.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    top: 10px;
+    border: 1px solid;
+}
+
+.five {
+    height: 100px;
+    width: 100px;
+    background-image: url("./images/5.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    top: 10px;
+    border: 1px solid;
+}
+
+#tshirt-div {
+    background-color: white;
+    position: absolute;
+    top: 5rem;
+    left: 40vh;
+}
+
+.tshirt-backgroundpicture {
+    background-image: url("./images/background_tshirt.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+}
+.tshirt-back {
+    background-image: url("./images/Backshirt.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    height: 100%;
+    width: 100%;
+}

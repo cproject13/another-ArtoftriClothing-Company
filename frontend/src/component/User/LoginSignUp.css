@@ -1,0 +1,272 @@
+.LoginSignUpContainer {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: url('../../assets/login-bg.png');
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0%;
+  left: 0;
+}
+.signUpPassword {
+   display: block;
+}
+.signUpPassword > .passwordDes{
+  width: 1000px;
+}
+.confirasswordDes{
+  width: 1000px;
+}
+.LoginSignUpBox {
+  background-color: white;
+  width: 25vw;
+  height: 80%;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index:100;
+  margin-right:3em;
+  border: 1px solid #2B2B2B;
+  border-radius:0.25em;
+}
+.login_signUp_toggle {
+  display: flex;
+  height: 100%;
+  padding:0.5em;
+}
+.login_signUp_toggle > p {
+  color: rgba(0, 0, 0, 0.678);
+  transition: all 0.5s;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+.login_signUp_toggle > p:hover {
+  color: #2B2B2B;
+}
+
+.LoginSignUpBox > div > button {
+  background-color: #2B2B2B;
+  height: 3px;
+  width: 50%;
+  border: none;
+  transition: all 0.5s;
+}
+.privacy-policy-container {
+  display:flex;
+  justify-content: flex-start;
+  align-items:center;
+  margin-top:-1em;
+}
+.privacy-policy-container p {
+  font-size:0.7em;
+  margin-top:0.5em;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  margin: auto;
+  padding: 2vmax;
+  height: 70%;
+  transition: all 0.5s;
+  gap:1em;
+}
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  margin: auto;
+  margin-top:3em;
+  padding: 2vmax;
+  /* justify-content: space-evenly; */
+  height: 70%;
+  transition: all 0.5s;
+  gap:1em;
+}
+.loginEmail input,.loginPassword input {
+  background: #E8E5E5 !important;
+  border:1px solid #2B2B2B;
+}
+.forgot-btn {
+  position:static;
+  width:100%;
+  height:fit-content;
+  font-size:0.75em;
+  margin-top:-1em;
+  float:left;
+}
+.signUpForm {
+  transform: translateY(-100%) translateX(-100vmax);
+}
+
+.loginForm > div,
+.signUpForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.loginForm > div > input,
+.signUpForm > div > input {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  border-radius: 4px;
+  outline: none;
+}
+
+.loginForm > div > svg,
+.signUpForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+  color: rgba(0, 0, 0, 0.623);
+}
+
+.loginForm > a {
+  color: rgba(0, 0, 0, 0.651);
+  text-decoration: none;
+  align-self: flex-end;
+  transition: all 0.5s;
+}
+
+.loginForm > a:hover {
+  color: black;
+}
+
+#registerImage > img {
+  width: 3vmax;
+  border-radius: 100%;
+}
+#registerImage > input {
+  display: flex;
+  padding: 0%;
+}
+
+#registerImage > input::file-selector-button {
+  cursor: pointer;
+  width: 100%;
+  z-index: 2;
+  height: 5vh;
+  border: none;
+  margin: 0%;
+  transition: all 0.5s;
+  padding: 0 1vmax;
+  color: rgba(0, 0, 0, 0.623);
+  background-color: rgb(255, 255, 255);
+}
+
+#registerImage > input::file-selector-button:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.loginBtn,
+.signUpBtn {
+  border: none;
+  background-color: #2B2B2B;
+  color: white;
+  width: 100%;
+  padding: 0.8vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 4px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight:bold;
+  letter-spacing:0.2em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+}
+
+.loginBtn:hover,.signupUpBtn:hover {
+  background: #E8E5E5;
+  transition: 0.2s ease-in-out;
+  color: #2B2B2B;
+  border: 1px solid #2B2B2B;
+}
+
+.shiftToLeft {
+  transform: translateX(-100%);
+}
+.shiftToNeutral {
+  transform: translateX(0%);
+  background:#2B2B2B;
+  color:#2B2B2B;
+}
+
+.shiftToNeutralForm {
+  transform: translateX(0%) translateY(-100%);
+}
+
+.shiftToRight {
+  transform: translateX(100%);
+}
+
+@media screen and (max-width: 600px) {
+  .LoginSignUpContainer {
+    background-color: white;
+  }
+  .LoginSignUpBox {
+    width: 100vw;
+    height: 95vh;
+  }
+  .login_signUp_toggle {
+    height: 5vmax;
+  }
+
+  .loginForm,
+  .signUpForm {
+    padding: 5vmax;
+  }
+
+  .loginForm > div > input,
+  .signUpForm > div > input {
+    padding: 2.5vmax 5vmax;
+    
+  }
+
+  .loginForm > div > svg,
+  .signUpForm > div > svg {
+    font-size: 2.8vmax;
+  }
+
+  .loginForm > a {
+   font-family:var(--ff-poppins);
+  }
+
+  #registerImage > img {
+    width: 8vmax;
+    border-radius: 100%;
+  }
+
+  #registerImage > input::file-selector-button {
+    height: 7vh;
+    
+  }
+
+  .loginBtn,
+  .signUpBtn {
+    padding: 1.8vmax;
+  }
+}
+.artoftri-logo-container {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  width:100vw;
+  height:100vh;
+  position:absolute;
+}
+.artoftri-logo {
+  width:487px;
+  height:487px;
+  position:absolute;
+}

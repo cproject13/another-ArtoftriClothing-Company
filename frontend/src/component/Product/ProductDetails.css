@@ -1,0 +1,316 @@
+.ProductDetails {
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  max-width: 100%;
+  padding: 6vmax;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.ProductDetails > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2vmax;
+  box-sizing: border-box;
+  border: 1px solid white;
+}
+.addToCart-btn {
+  background:#2B2B2B !important;
+  border-radius:0 !important;
+}
+.submitReview-btn {
+  background:#2B2B2B !important;
+  border-radius:0 !important;
+}
+.ProductDetails > div:last-child {
+  align-items: flex-start;
+}
+
+.CarouselImage {
+  width: 20vmax;
+}
+
+.detailsBlock-1 > h2 {
+  color: rgb(54, 54, 54);
+  font-family:'Poppins', sans-serif;
+}
+
+.detailsBlock-1 > p {
+  color: rgba(54, 54, 54, 0.582);
+  font-family:'Poppins', sans-serif;
+}
+
+.detailsBlock-2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.205);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+  width: 70%;
+  padding: 1vmax 0;
+}
+
+.detailsBlock-2-span {
+  font-family:'Poppins', sans-serif;
+  color: rgba(0, 0, 0, 0.699);
+}
+
+.detailsBlock-3 {
+  width: 70%;
+}
+
+.detailsBlock-3 > h1 {
+  color: #2B2B2B;
+  font-family:'Poppins', sans-serif;
+  margin: 1vmax 0;
+}
+.detailsBlock-3-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.quantity-block {
+  display:flex;
+  gap:0.5em;
+  padding:0.2em;
+  align-items:center;
+}
+.quantity-block > button {
+  border: none;
+  background-color: #2B2B2B;
+  padding: 0.5vmax;
+  cursor: pointer;
+  color: white;
+  transition: all 0.5s;
+}
+.quantity-block > button:hover {
+  background-color: rgba(0, 0, 0, 0.767);
+}
+
+.quantity-block > input {
+  border: none;
+  padding: 0.5vmax;
+  width: 1vmax;
+  text-align: center;
+  outline: none;
+  font-family:'Poppins', sans-serif;
+  color: rgba(0, 0, 0, 0.74);
+}
+
+.detailsBlock-3-1 > button:last-child {
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: all 0.5s;
+  background-color: tomato;
+  font-family:'Poppins', sans-serif;
+  border-radius: 20px;
+  padding: 0.5vmax 2vmax;
+  margin: 1vmax;
+  outline: none;
+}
+
+.detailsBlock-3-1 > button:last-child:hover {
+  background-color: rgb(214, 84, 61);
+}
+
+.detailsBlock-3 > p {
+  border-top: 1px solid rgba(0, 0, 0, 0.205);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+  padding: 1vmax 0;
+  color: rgba(0, 0, 0, 0.651);
+  font-family:'Poppins', sans-serif;
+  margin: 1vmax 0;
+}
+
+.detailsBlock-4 {
+  color: rgba(0, 0, 0, 0.897);
+  font-family:'Poppins', sans-serif;
+}
+
+.detailsBlock-4 > p {
+  color: rgba(0, 0, 0, 0.534);
+  font-family:'Poppins', sans-serif;
+}
+
+.submitReview {
+  border: none;
+  background-color: tomato;
+  font-family:'Poppins', sans-serif;
+  border-radius: 20px;
+  padding: 0.6vmax 2vmax;
+  margin: 1vmax 0;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s;
+  outline: none;
+}
+.submitReview:hover {
+  background-color: rgb(197, 68, 45);
+  transform: scale(1.1);
+}
+
+.submitDialog {
+  display: flex;
+  flex-direction: column;
+}
+.submitDialogTextArea {
+  border: 1px solid rgba(0, 0, 0, 0.082);
+  margin: 1vmax 0;
+  outline: none;
+  padding: 1rem;
+  font-family:'Poppins', sans-serif;
+}
+
+.reviewsHeading {
+  color: #000000be;
+  font-family:'Poppins', sans-serif;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+  padding: 1vmax;
+  width: 20vmax;
+  margin: auto;
+  margin-bottom: 4vmax;
+}
+.reviews {
+  display: flex;
+  overflow: auto;
+}
+.quantity-order-btn {
+  background:none;
+  font-size:1em;
+  font-weight:400;
+}
+.reviewCard {
+  font-family:'Poppins', sans-serif;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
+  border: 1px solid rgba(56, 56, 56, 0.116);
+  width: 30vmax;
+  display: flex !important;
+  align-items: center;
+  margin: 1vmax;
+  padding: 3vmax;
+}
+.custom-add-to-cart-btn {
+  background:#2b2b2b !important;
+  border-radius:0 !important;
+  margin:0 !important;
+  margin-top: 1em !important;
+}
+.custom-add-to-cart-btn:hover {
+  background:#474545 !important;
+  border-radius:0 !important;
+  margin:0 !important;
+  margin-top: 1em !important;
+  transition:0.2s ease-in-out !important;
+}
+.reviewCard > img {
+  width: 5vmax;
+}
+.reviewCard > p {
+  color: rgba(0, 0, 0, 0.836);
+  font-family:'Poppins', sans-serif;
+}
+.reviewCardComment {
+  color: rgba(0, 0, 0, 0.445);
+  font-family:'Poppins', sans-serif;
+}
+.size-options {
+  padding:0.5em;
+  outline:none;
+  cursor:pointer;
+}
+.noReviews {
+  font-family:'Poppins', sans-serif;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.548);
+}
+
+@media screen and (max-width: 600px) {
+  .ProductDetails {
+    flex-direction: column;
+    height: unset;
+  }
+
+  .ProductDetails > div:last-child {
+    align-items: center;
+  }
+
+  .detailsBlock-1 > h2 {
+    font-size: 2.8vmax;
+    text-align: center;
+  }
+
+  .detailsBlock-1 > p {
+    text-align: center;
+    font-size: 1vmax;
+  }
+
+  .detailsBlock-2 {
+    justify-content: center;
+  }
+  .detailsBlock-2 > span {
+    font-size: 1.5vmax;
+  }
+
+  .detailsBlock-3 > h1 {
+    font: 700 3vmax "Franklin Gothic Medium";
+    text-align: center;
+  }
+
+  .detailsBlock-3-1 {
+    flex-direction: column;
+  }
+
+  .quantity-block {
+    display:flex !important;
+  }
+  .quantity-block > button {
+    padding: 1.2vmax;
+    width: 4vmax;
+  }
+
+  .quantity-block > input {
+    padding: 1.5vmax;
+    width: 3vmax;
+    font-family:'Poppins', sans-serif;
+  }
+
+  .detailsBlock-3-1 > button:last-child {
+    font-family:'Poppins', sans-serif;
+    padding: 1.5vmax;
+    width: 20vmax;
+    margin: 3vmax 0;
+  }
+
+  .detailsBlock-3 > p {
+    padding: 2.5vmax 0;
+    text-align: center;
+    font-family:'Poppins', sans-serif;
+  }
+
+  .detailsBlock-4 {
+    font-family:'Poppins', sans-serif;
+  }
+
+  .detailsBlock-4 > p {
+    font-family:'Poppins', sans-serif;
+  }
+
+  .submitReview {
+    font-family:'Poppins', sans-serif;
+    padding: 1.5vmax;
+    width: 20vmax;
+    margin: 3vmax 0;
+  }
+
+  .reviewCard > p {
+    font-family:'Poppins', sans-serif;
+  }
+  .reviewCardComment {
+    font-family:'Poppins', sans-serif;
+  }
+}

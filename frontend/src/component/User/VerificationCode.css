@@ -1,0 +1,29 @@
+.verification-container {
+    background:url('../../assets/verification-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.code-container {
+    width:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.code-container span {
+    color:#FFFFFF;
+    background:#212121;
+    font-weight:bold;
+    padding:0.80em;
+    width:30%;
+}
+.code-container input {
+    padding:1em;
+    outline:none;
+    width:100%;
+    height:100%;
+}
