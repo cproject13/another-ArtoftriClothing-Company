@@ -90,7 +90,7 @@ const ConfirmOrder = ({ history }) => {
                     </Link>{" "}
                     <span>
                       {item.quantity} X ₱{item.price} ={" "}
-                      <b>₱{item.price * item.quantity}</b>
+                      <b>₱{Number(item.price * item.quantity).toFixed(2)}</b>
                     </span>
                   </div>
                 ))}
@@ -108,11 +108,11 @@ const ConfirmOrder = ({ history }) => {
               </div>
               <div>
                 <p>Shipping Charges:</p>
-                <span>₱{shippingCharges}</span>
+                <span>₱{Number(shippingCharges).toFixed(2)}</span>
               </div>
               <div>
                 <p>GST:</p>
-                <span>₱{tax}</span>
+                <span>₱{Number(tax).toFixed(2)}</span>
               </div>
             </div>
 
@@ -120,7 +120,7 @@ const ConfirmOrder = ({ history }) => {
               <p>
                 <b>Total:</b>
               </p>
-              <span>₱{totalPrice}</span>
+              <span>₱{Number(totalPrice).toFixed(2)}</span>
             </div>
 
             <button onClick={proceedToPayment}>Proceed To Payment</button>

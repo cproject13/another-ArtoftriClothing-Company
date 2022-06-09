@@ -72,7 +72,7 @@ const Payment = () => {
   var fixDecimal = Number(totalPricewithdecimal).toFixed(2)
   var convertString = fixDecimal.toString()
   var totalPrice = convertString
-  const address = `${shippingInfo.address}, ${shippingInfo.city}, ${shippingInfo.state}, ${shippingInfo.pinCode}, ${shippingInfo.country}`;
+  const address = `${shippingInfo.address}, ${shippingInfo.state}, ${shippingInfo.pinCode}`;
   return (
     <Fragment>
       <MetaData title="Payment" />
@@ -91,7 +91,7 @@ const Payment = () => {
                 <p className="paymentInput">To: {userName}</p>
               </div>
               <div>
-                <p className="paymentInput">Total Price: ₱{totalPrice}</p>
+                <p className="paymentInput">Total Price: ₱{Number(totalPrice).toFixed(2)}</p>
               </div>
 
               <button className="checkout-button" onClick={submitHandler}><h1>COD</h1></button>

@@ -13,14 +13,14 @@ export const cartReducer = (
       const item = action.payload;
 
       const isItemExist = state.cartItems.find(
-        (i) => i.size === item.size
+        (i) => i.size === item.size && i.product === item.product
       );
 
       if (isItemExist) {
         return {
           ...state,
           cartItems: state.cartItems.map((i) =>
-            i.size === isItemExist.size ? item : i
+            i.size === isItemExist.size && i.product === isItemExist.product ? item : i
           ),
         };
       } else {
