@@ -6,6 +6,7 @@ const {
   getAllOrders,
   updateOrder,
   deleteOrder,
+  updateOrderExpectedDate
 } = require("../controllers/orderController");
 const router = express.Router();
 
@@ -25,5 +26,10 @@ router
   .route("/admin/order/:id")
   .put(isAuthenticatedUser, authorizeRoles("admin"), updateOrder)
   .delete(isAuthenticatedUser, authorizeRoles("admin"), deleteOrder);
+
+  // EDIT Expected date
+router
+  .route("/admin/order/expectedDate/:id")
+  .put(isAuthenticatedUser, authorizeRoles("admin"), updateOrderExpectedDate)
 
 module.exports = router;

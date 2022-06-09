@@ -13,6 +13,8 @@ import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
 import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import { Button } from "@material-ui/core";
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import TextField from '@mui/material/TextField';
 import { UPDATE_ORDER_RESET } from "../../constants/orderConstants";
 import "./processOrder.css";
 
@@ -30,10 +32,21 @@ const ProcessOrder = ({ match }) => {
     dispatch(updateOrder(match.params.id, myForm));
   };
 
+  const updateOrderExpectedDateHandler = (e) => {
+    e.preventDefault();
+
+    const myForm = new FormData();
+
+    myForm.set("expectedDate", expDate);
+
+    dispatch(updateOrder(match.params.id, myForm));
+  };
+
   const dispatch = useDispatch();
   const alert = useAlert();
 
   const [status, setStatus] = useState("");
+  const [expDate, setExpectedDate] = useState(null);
 
   useEffect(() => {
     if (error) {
@@ -139,12 +152,12 @@ const ProcessOrder = ({ match }) => {
               </div>
               {/*  */}
               <div
-                style={{
-                  display: order.orderStatus === "Delivered" ? "none" : "block",
-                }}
               >
                 <form
                   className="updateOrderForm"
+                  style={{
+                    display: order.orderStatus === "Delivered" ? "none" : "block",
+                  }}
                   onSubmit={updateOrderSubmitHandler}
                 >
                   <h1>Process Order</h1>
@@ -171,6 +184,47 @@ const ProcessOrder = ({ match }) => {
                     }
                   >
                     Process
+                  </Button>
+                </form>
+                <form className="updateExpectedDate" style={{
+                  display: order.orderStatus === "Shipped" ? "none" : "block",
+                }}
+                onSubmit={updateOrderExpectedDateHandler}
+                >
+                   <h1>Update Expected Date</h1>
+                  <div>
+                    <AccountTreeIcon />
+                    <div className="datetime-picker-container">
+                    <DatePicker
+                        label="Expected Date"
+                        value={expDate}
+                        onChange={(newValue) => {
+                          setExpectedDate(new Date(newValue));
+                        }}
+                        renderInput={(params) => <TextField {...params} />}
+                      />
+                    </div>
+                    {/* <select onChange={(e) => setStatus(e.target.value)}>
+                      <option value="">Choose Date</option>
+                      {order.orderStatus === "Processing" && (
+                        <option value="Shipped">Shipped</option>
+                      )}
+
+                      {order.orderStatus === "Shipped" && (
+                        <option value="Delivered">Delivered</option>
+                      )}
+                    </select> */}
+                    
+                  </div>
+
+                  <Button
+                    id="updateExpectedDateBtn"
+                    type="submit"
+                    disabled={
+                      loading ? true : false || status === "" ? true : false
+                    }
+                  >
+                    Update
                   </Button>
                 </form>
               </div>
